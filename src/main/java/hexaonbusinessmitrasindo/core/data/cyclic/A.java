@@ -1,4 +1,4 @@
-package hexaonbusinessmitrasindo.core.cyclic;
+package hexaonbusinessmitrasindo.core.data.cyclic;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

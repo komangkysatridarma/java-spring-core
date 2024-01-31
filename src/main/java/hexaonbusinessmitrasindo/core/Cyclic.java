@@ -1,8 +1,8 @@
 package hexaonbusinessmitrasindo.core;
 
-import hexaonbusinessmitrasindo.core.cyclic.A;
-import hexaonbusinessmitrasindo.core.cyclic.B;
-import hexaonbusinessmitrasindo.core.cyclic.C;
+import hexaonbusinessmitrasindo.core.data.cyclic.A;
+import hexaonbusinessmitrasindo.core.data.cyclic.B;
+import hexaonbusinessmitrasindo.core.data.cyclic.C;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
