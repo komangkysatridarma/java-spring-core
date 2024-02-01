@@ -1,8 +1,10 @@
 package hexaonbusinessmitrasindo.core;
 
 import hexaonbusinessmitrasindo.core.repository.CategoryRepository;
+import hexaonbusinessmitrasindo.core.repository.CustomerRepository;
 import hexaonbusinessmitrasindo.core.repository.ProductRepository;
 import hexaonbusinessmitrasindo.core.service.CategoryService;
+import hexaonbusinessmitrasindo.core.service.CustomerService;
 import hexaonbusinessmitrasindo.core.service.ProductService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -42,4 +44,17 @@ public class ComponentTest {
 
         Assertions.assertSame(categoryRepository, categoryService.getCategoryRepository());
     }
+
+    @Test
+    void testCustomerRepository(){
+        CustomerService customerService = context.getBean(CustomerService.class);
+        CustomerRepository normalCustomerRepository = context.getBean("normalCustomerRepository",CustomerRepository.class);
+        CustomerRepository premiumCustomerRepository = context.getBean("premiumCustomerRepository",CustomerRepository.class);
+
+        Assertions.assertSame(normalCustomerRepository, customerService.getNormalCustomerRepository());
+        Assertions.assertSame(premiumCustomerRepository, customerService.getPremiumCustomerRepository());
+
+
+    }
+
 }
